@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    border: 2px solid green;
+    height: 100%;
+}
+
+/* Förälder till .wrapper */
+body {
+    display: flex;
+    flex-direction: column;
+    /* Eftersom flex direction: column, så behöver jag använda
+        align-items för att centrera på x-axeln. och
+        justify-content för y-axeln. */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Förälder */
+.wrapper {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+    width: 80%;
+    gap: 100px;
+}
+
+/* Barnen */
+.wrapper > div {
+    border: 2px solid red;
+    flex-grow: 2;
+}
+
+.wrapper > div:last-child,
+.wrapper > div:first-child {
+    flex-grow: 1;
+}
