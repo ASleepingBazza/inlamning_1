@@ -5,12 +5,12 @@
 
 html,
 body {
-    border: 2px solid green;
     height: 100%;
 }
 
 /* Förälder till .wrapper */
 body {
+    border: 2px solid black;
     display: flex;
     flex-direction: column;
     /* Eftersom flex direction: column, så behöver jag använda
@@ -22,12 +22,12 @@ body {
 
 /* Förälder */
 .wrapper {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 90%;
     width: 90%;
-    gap: 100px;
+    gap: 50px;
 }
 
 /* Barnen */
@@ -39,4 +39,10 @@ body {
 .wrapper > div:last-child,
 .wrapper > div:first-child {
     flex-grow: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        flex-direction: row;
+    }
 }
