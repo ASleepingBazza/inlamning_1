@@ -6,11 +6,14 @@
 html,
 body {
     height: 100%;
+
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 12pt;
 }
 
 /* Förälder till .wrapper */
 body {
-    border: 2px solid black;
+    /* border: 5px solid black; */
     display: flex;
     flex-direction: column;
     /* Eftersom flex direction: column, så behöver jag använda
@@ -20,29 +23,119 @@ body {
     align-items: center;
 }
 
-/* Förälder */
-.wrapper {
+header {
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: 150px;
+
+    background-image: url(../assets/stolen_header_background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.header-wrapper {
+    /* border: 2px solid red; */
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-wrapper > h1 {
+    color: white;
+}
+
+.main-wrapper {
     /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
-    height: 90%;
-    width: 90%;
-    gap: 50px;
-}
+    height: 100%;
+    width: 100%;
 
-/* Barnen */
-.wrapper > div {
-    border: 2px solid red;
-    flex-grow: 2;
+    background-image: url(../assets/stolen_hero_background.jpeg);
+    background-position: center;
+    background-size: cover;
 }
-
-.wrapper > div:last-child,
-.wrapper > div:first-child {
+.main-2 {
+    /* border: 2px solid red; */
     flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-container {
+    width: 200px;
+}
+img {
+    width: 100%;
+}
+
+.main-3,
+.main-1 {
+    /* border: 2px solid red; */
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 10pt;
+    padding-bottom: 10pt;
+}
+.main-1 > span,
+.main-3 > span {
+    /* border: 2px solid red; */
+    width: 80%;
+    padding: 15pt;
+    border-radius: 5pt;
+
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+footer {
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: 150px;
+
+    background-image: url(../assets/stolen_footer_background.png);
+    background-position: center;
+    background-size: cover;
+}
+.footer-wrapper {
+    /* border: 2px solid red; */
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-wrapper > h3 {
+    color: white;
 }
 
 @media screen and (min-width: 768px) {
-    .wrapper {
+    body {
+        font-size: 1.2rem;
+    }
+
+    .main-wrapper {
         flex-direction: row;
+    }
+
+    .main-2 > div {
+        flex-grow: 6;
+    }
+
+    .main-3,
+    .main-1 {
+        flex-grow: 1;
+    }
+
+    .img-container {
+        width: 400px;
     }
 }
